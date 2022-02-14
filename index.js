@@ -15,7 +15,7 @@ getData();
 jokeForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const firstName = firstNameInput.value || 'Chuck';
-    const lastName = firstNameInput.value || 'Norris';
+    const lastName = lastNameInput.value || 'Norris';
     const urlname = `https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
     const res = await fetch(urlname);
     const data = await res.json();
