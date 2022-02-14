@@ -5,7 +5,7 @@ const firstNameInput = document.getElementById('firstName');
 const lastNameInput = document.getElementById('lastName');
 
 async function getData() {
-    const url = `http://api.icndb.com/jokes/random`;
+    const url = `https://api.icndb.com/jokes/random`;
     const res = await fetch(url);
     const data = await res.json();
     jokeText.innerHTML = data.value.joke;
@@ -16,7 +16,7 @@ jokeForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const firstName = firstNameInput.value || 'Chuck';
     const lastName = firstNameInput.value || 'Norris';
-    const urlname = `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
+    const urlname = `https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`;
     const res = await fetch(urlname);
     const data = await res.json();
     jokeText.innerHTML = data.value.joke;
